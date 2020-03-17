@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohd Sahil - React Lead</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header id="main-header">
+        <div class="row no-gutters">
+          <div class="col-lg-3 col-md-5">
+            <img src="img/my-pic.jpg" alt="" />
+          </div>
+          <div class="col-lg-9 col-md-7">
+            <div class="d-flex flex-column">
+              <div class="p-5 bg-dark text-white">
+                <div
+                  class="d-flex flex-row justify-content-between align-items-center"
+                >
+                  <h1 class="display-4">Mohd Sahil</h1>
+                  <div class="d-none d-md-block">
+                    <a href="https://twitter.com/" class="text-white">
+                      <i class="fab fa-instagram-square"></i>
+                    </a>
+                  </div>
+                  <div class="d-none d-md-block">
+                    <a href="https://twitter.com/" class="text-white">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </div>
+                  <div class="d-none d-md-block">
+                    <a href="https://twitter.com/" class="text-white">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                  <div class="d-none d-md-block">
+                    <a href="https://twitter.com/" class="text-white">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 bg-black">
+                <h3 class="portfolio-title">
+                  Experienced Full Stack Web Developer
+                </h3>
+              </div>
+              <div>
+                <div
+                  class="d-flex flex-row text-white align-items-stretch text-center"
+                >
+                  <div
+                    class="port-item p-4 bg-primary"
+                    data-toggle="collapse"
+                    data-target="#home"
+                  >
+                    <i class="fas fa-home fa-2x"></i>
+                    <span class="d-none d-sm-block">Home</span>
+                  </div>
+                  <div
+                    class="port-item p-4 bg-success"
+                    data-toggle="collapse"
+                    data-target="#Resume"
+                  >
+                    <i class="fas fa-graduation-cap fa-2x"></i>
+                    <span class="d-none d-sm-block ">Resume</span>
+                  </div>
+                  <div
+                    class="port-item p-4 bg-warning "
+                    data-toggle="collapse"
+                    data-target="#work"
+                  >
+                    <i class="fas fa-folder-open fa-2x"></i>
+                    <span class="d-none d-sm-block ">Work</span>
+                  </div>
+                  <div
+                    class="port-item p-4 bg-danger"
+                    data-toggle="collapse"
+                    data-target="#contact"
+                  >
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <span class="d-none d-sm-block">Contact</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Home -->
+      <div id="home" class="collapse show">
+        <div class="card card-body bg-primary text-white py-5">
+          <h2>Welcome to my page</h2>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            sapiente commodi quidem eaque iure eligendi est aperiam? Voluptatum
+            consequatur excepturi adipisci, explicabo id laboriosam tenetur?
+            Optio dolorem eos quisquam similique.
+          </p>
+        </div>
+        <div class="card card-body py-5">
+          <h3>My Skills</h3>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia
+            quos asperiores cum, laudantium fugit?
+          </p>
+        </div>
+      </div>
+
+      <!-- Resume -->
+      <div id="resume" class="collapse show">
+        <div class="card card-body bg-primary text-white py-5">
+          <h2>Download my resume</h2>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            sapiente commodi quidem eaque iure eligendi est aperiam? Voluptatum
+            consequatur excepturi adipisci, explicabo id laboriosam tenetur?
+            Optio dolorem eos quisquam similique.
+          </p>
+        </div>
+        <div class="card card-body py-5">
+          <h3>My Skills</h3>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad mollitia
+            quos asperiores cum, laudantium fugit?
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div id="main-footer" class="p-5 bg-dark text-white">
+        <div class="row">
+          <div class="col md-6">
+            <a href="" class="btn btn-outline-light">
+              <i class="fas fa cloud"></i>Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+      // get the current year for the copywrite
+      $("#year").text(new Date().getFullYear());
+    </script>
+  </body>
+</html>
