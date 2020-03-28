@@ -1,0 +1,306 @@
+/* 
+  Light grey : #F3EDED
+  Light grey text 1 : #777
+  Dark grey : #363333
+  Purple : #775ADA
+  
+*/
+html {
+  font-size: 62.5%;
+}
+
+/* Universal Selector */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* To inherit font thoughout the body */
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+  line-height: 1.7;
+  font-weight: 400;
+  padding: 0 15rem;
+  background-color: black;
+}
+
+section h1,
+header h1 {
+  font-family: "Allura", cursive;
+  font-size: 7rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+header {
+  height: 55vh;
+  border: 1px solid #777;
+  display: flex;
+}
+
+header .header-left-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+  padding-top: 3.5rem;
+  background-image: linear-gradient(
+      to left bottom,
+      rgba(22, 2, 87, 0.726),
+      rgba(1, 1, 31, 0.726)
+    ),
+    url(../img/tiles-shapes-bg.jpg);
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  animation: scale 2s ease-in;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.7);
+  }
+  20% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+header .header-left-section img.profile-pic {
+  width: 80%;
+}
+header .header-left-section h1 {
+  color: white;
+}
+
+header .header-left-section:before {
+  content: "";
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ecebeb;
+  position: absolute;
+  transform: translate(0);
+  animation: profilePic 2s ease-in;
+}
+@keyframes profilePic {
+  0% {
+    width: 100%;
+  }
+  20% {
+    width: 10%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+header .header-right-section {
+  flex-grow: 1;
+  font-family: "Allura", cursive;
+  font-size: 4rem;
+  position: relative;
+  background-image: url(../img/banner-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+header .header-right-section span {
+  opacity: 0;
+  position: absolute;
+  left: 95rem;
+  width: 70%;
+  font-size: 5rem;
+  opacity: 0;
+  font-weight: bold;
+}
+header .header-right-section span:nth-child(1) {
+  top: 10rem;
+  animation: whoAmI 3s ease-in infinite alternate-reverse;
+}
+header .header-right-section span:nth-child(2) {
+  top: 20rem;
+  animation: fullstack 3s ease-in infinite alternate;
+  animation-delay: 0.5s;
+}
+
+header .header-right-section span:nth-child(3) {
+  top: 30rem;
+  animation: experience 5s ease-in infinite alternate-reverse;
+  animation-delay: 1s;
+}
+
+@keyframes whoAmI {
+  0% {
+    transform: translateX(0rem);
+    opacity: 0;
+  }
+  15% {
+    transform: translateX(-60rem);
+    opacity: 0.5;
+  }
+  90% {
+    transform: translateX(-65rem);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-150rem);
+    opacity: 1;
+  }
+}
+
+@keyframes fullstack {
+  0% {
+    transform: translateX(0rem);
+  }
+  10% {
+    transform: translateX(-80rem);
+    opacity: 0.5;
+  }
+  95% {
+    transform: translateX(-83rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-150rem);
+    opacity: 0;
+  }
+}
+
+@keyframes experience {
+  0% {
+    transform: translateX(0rem);
+    opacity: 0;
+  }
+  15% {
+    transform: translateX(-80rem);
+    opacity: 0.7;
+  }
+  95% {
+    transform: translateX(-83rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-150rem);
+    opacity: 0;
+  }
+}
+
+section.skills {
+  padding: 2rem;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  display: flexbox;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+section.skills h1 {
+  font-size: 9rem;
+}
+section.skills ul li {
+  text-transform: uppercase;
+  list-style: none;
+  position: relative;
+  margin-top: 3rem;
+}
+section.skills ul li:not(:first-child) {
+  margin-top: 3rem;
+}
+section.skills ul {
+  width: 50%;
+}
+section.skills ul li:before {
+  content: "";
+  left: 0;
+  top: calc(100% + 0.1rem);
+  position: absolute;
+  width: 100%;
+  height: 1.5rem;
+  border-radius: 100rem;
+  background-color: #775ada;
+}
+section.skills ul li:after {
+  content: "";
+  left: 0;
+  top: calc(100% + 0.1rem);
+  position: absolute;
+  width: 0;
+  height: 1.5rem;
+  border-radius: 100rem;
+  background-color: #1d0864;
+}
+
+section.skills ul li.html:after {
+  animation: html 0.5s ease-in forwards;
+}
+@keyframes html {
+  to {
+    width: 80%;
+  }
+}
+section.skills ul li.css:after {
+  animation: css 0.5s ease-in forwards;
+}
+@keyframes css {
+  to {
+    width: 90%;
+  }
+}
+section.skills ul li.javascript:after {
+  animation: javascript 0.5s ease-in forwards;
+}
+@keyframes javascript {
+  to {
+    width: 90%;
+  }
+}
+section.skills ul li.reactjs:after {
+  animation: reactjs 0.5s ease-in forwards;
+}
+@keyframes reactjs {
+  to {
+    width: 80%;
+  }
+}
+section.skills ul li.nodejs:after {
+  animation: nodejs 0.5s ease-in forwards;
+}
+@keyframes nodejs {
+  to {
+    width: 70%;
+  }
+}
+section.skills ul li.mongodb:after {
+  animation: mongodb 0.5s ease-in forwards;
+}
+@keyframes mongodb {
+  to {
+    width: 70%;
+  }
+}
+section.skills ul li.backendAPI:after {
+  animation: backendAPI 0.5s ease-in forwards;
+}
+@keyframes backendAPI {
+  to {
+    width: 95%;
+  }
+}
+section.skills ul li.cicd:after {
+  animation: cicd 0.5s ease-in forwards;
+}
+@keyframes cicd {
+  to {
+    width: 50%;
+  }
+}
